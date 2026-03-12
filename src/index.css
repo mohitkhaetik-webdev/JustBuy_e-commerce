@@ -1,0 +1,22 @@
+@import "tailwindcss";
+@theme {
+    --color-lightgold:#fafad2;
+    --breakpoint-extrasm:375px;
+    --color-newblue:#3f59e4;
+}
+
+@layer components{
+    
+    .sizing-and-font{
+        @apply  bg-green-800    }
+
+     .addbg{
+        @apply fill-amber-500
+     } 
+
+     .button-styling{
+        @apply bg-newblue text-white py-1 px-3
+     }
+}
+
+
