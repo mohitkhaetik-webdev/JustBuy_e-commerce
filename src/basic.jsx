@@ -97,7 +97,7 @@ const productsecond = [
   },
   {
     id: 30,
-    name: "Ladies Kurti",
+    name: "Ladies Saree",
     type: "Ladies",
     price: 699,
     description: "Traditional kurti perfect for daily wear.",
