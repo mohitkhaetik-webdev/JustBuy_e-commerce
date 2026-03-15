@@ -5,7 +5,7 @@ import { useDispatch } from 'react-redux'
 import { Additem } from '../redux/cartslice'
 import { toast } from 'react-toastify'
 
-function Card({ img, price, name, id, qty,description }) {
+function Card({ img, price, name, id, qty, description }) {
 
   let dispatch = useDispatch()
   return (
@@ -15,7 +15,7 @@ function Card({ img, price, name, id, qty,description }) {
         <div className='font-newstyle flex justify-between'>{name} <span className='hover:text-red-600  ' ><HugeiconsIcon icon={FavouriteIcon} /></span> </div>
         <div className='font-mono font-bold text-xl'>Rs{price}</div>
         <div className='flex justify-between items-center'>
-          <div id='addtocart' className='bg-red-500 text-center p-1 text-sm   font-medium text-white rounded-lg cursor-pointer' onClick={() => {dispatch(Additem({ id, name, img, price, qty ,description}));toast.success("Your item is added")}}>ADD TO CART</div>
+          <div id='addtocart' className='bg-red-500 text-center p-1 text-sm   font-medium text-white rounded-lg cursor-pointer' onClick={() => { dispatch(Additem({ id, name, img, price, qty, description })); toast("Your item is added") }}>ADD TO CART</div>
           <span className='rounded-md bg-gray-300 text-center  p-1 text-[10px] cursor-pointer'>FREE DELIVERY</span>
         </div>
       </div>
