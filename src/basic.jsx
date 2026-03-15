@@ -466,7 +466,25 @@ const productsecond = [
     price: 2199,
     description: "Lightweight sports shoes designed for comfort and running.",
     img:img72
+  },
+   {
+    id: 73,
+    name: "Stylish Men Bracelets",
+    type: "Mens",
+    price: 599,
+    description: "Comfortable cotton t-shirt for daily casual wear.",
+    img: "https://images.meesho.com/images/products/373639083/nnuwn_512.avif?width=360"
+  },
+
+  {
+    id: 74,
+    name: "Styles Trendy Men Caps & Hats",
+    type: "Mens",
+    price: 219,
+    description: "Lightweight caps designed for comfort.",
+    img:"https://images.meesho.com/images/products/411622567/8tu6n_512.avif?width=360"
   }
+
 
 ]
 export default productsecond
