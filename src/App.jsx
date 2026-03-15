@@ -5,7 +5,8 @@ function App() {
   return (
     <div className=''>
       <Home/>
-      <ToastContainer />
+      <ToastContainer position='bottom-right'
+      toastClassName="text-xs md:text-base !w-60 md:!w-80" />
     </div>
   )
 }
