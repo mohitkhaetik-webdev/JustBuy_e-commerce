@@ -11,8 +11,8 @@ function Productdetails() {
         window.scrollTo(0, 0)
     }, [])
 
-    return ( 
-        show=== null ? null : (
+    return (
+        show === null ? null : (
 
             <div className=' min-h-screen  px-28 bg-gray-200' >
                 <div className='flex  gap-9 min-h-full pt-36'>
@@ -32,13 +32,13 @@ function Productdetails() {
                                 <div id='small' className='bg-gray-400 px-3 py-2 w-10 text-center'>XL</div>
                                 <div id='small' className='bg-gray-400 px-3 py-2 w-10 flex justify-center'>XXL</div></div>
                         </div>
-                        <div id='addtocart' className='bg-red-500 text-center cursor-pointer p-2 w-[30%]  font-medium text-white mt-4' onClick={() => { dispatch(Additem({ img: show?.img, name: show?.name, price: show?.price, description: show?.description, qty: show?.qty })); toast("Your item is added") }}>ADD TO CART</div>
+                        <div id='addtocart' className='bg-red-500 text-center cursor-pointer p-2 w-[60%]  font-medium text-white mt-4' onClick={() => { dispatch(Additem({ img: show?.img, name: show?.name, price: show?.price, description: show?.description, qty: show?.qty })); toast("Your item is added") }}>ADD TO CART</div>
 
                     </div>
                 </div>
             </div>
         )
-       
+
     )
 }
 
