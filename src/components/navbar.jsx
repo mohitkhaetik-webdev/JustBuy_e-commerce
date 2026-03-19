@@ -7,17 +7,17 @@ import productsecond from '../basic'
 import { useAuth0 } from "@auth0/auth0-react";
 
 function Nav() {
+
   let { setcartslide } = useContext(Context)
   let { setproduct } = useContext(Context)
   let { active, setactive, input, setinput } = useContext(Context)
   const {
-
     isAuthenticated,
     loginWithRedirect: login, // Starts the login flow
     logout: auth0Logout, // Starts the logout flow
-    
+
   } = useAuth0();
-   const logout = () =>
+  const logout = () =>
     auth0Logout({ logoutParams: { returnTo: window.location.origin } });
 
   useEffect(() => {
@@ -65,22 +65,20 @@ function Nav() {
             <input type="text" name="" placeholder='search here' className='outline-0 hidden sm:flex' onChange={(e) => setinput(e.target.value)} value={input} />
           </div>
 
-          
-          
+
+
 
           {isAuthenticated ? (
             <>
-              
-
               {/* <pre>{JSON.stringify(user, null, 2)}</pre> */}
 
-              <button onClick={logout}>Logout</button>
+              <button className='bg-red-500 text-white p-1 rounded-sm flex items-center' onClick={logout}>Logout</button>
             </>
-          ):(<>
-             {/* <button className='button-styling' onClick={login}>Login</button> */}
-             <div id="signin" onClick={login}><HugeiconsIcon icon={UserIcon} /></div></>
-          ) }
-         <div id="fav"><HugeiconsIcon icon={FavouriteCircleIcon} /></div>
+          ) : (<>
+            {/* <button className='button-styling' onClick={login}>Login</button> */}
+            <div id="signin" onClick={login}><HugeiconsIcon icon={UserIcon} /></div></>
+          )}
+          <div id="fav"><HugeiconsIcon icon={FavouriteCircleIcon} /></div>
 
           <div id="cart" className='' onClick={() => (setcartslide(true))}><HugeiconsIcon icon={ShoppingBasket01Icon} className='relative' />
           </div>

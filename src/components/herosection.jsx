@@ -1,24 +1,29 @@
 
-import React, { useContext } from 'react'
+import React, { useContext, useEffect } from 'react'
 import Card from './card'
 import { HugeiconsIcon } from '@hugeicons/react'
 import { Cancel02Icon, CloudAngledRainFreeIcons, MultiplicationSignIcon } from '@hugeicons/core-free-icons'
 import { Context } from '../context/context.jsx'
 import { useSelector } from 'react-redux'
 import Cartcard from './cartcard.jsx'
-import products from '../basicproductfirst.jsx'
+import productfirst from '../basicproductfirst.jsx'
 import bannerimg from "../assets1/bannerimg.webp"
 import productsecond from '../basic.jsx'
 
 
 function Herosection() {
+
     let items = useSelector(state => state.cart)
+    console.log(items)
     let { product } = useContext(Context)
     let { cartslide, setcartslide, active, input } = useContext(Context)
     let Subtotal = items.reduce((total, e) => total + e.price * e.qty, 0)
     let Deliveryfees = 20
     let taxes = Subtotal * 0.5 / 100
     let Total = Math.floor(Subtotal + Deliveryfees + taxes)
+    useEffect(() => {
+        window.scrollTo(0, 0)
+    }, [active])
     return (
         <div className='h-auto min-w-full  bg-linear-to-b from-blue-50  via-purple-50 to-pink-50 pt-20' id='herosection'>
 
@@ -42,7 +47,7 @@ function Herosection() {
                     </div>
                 </div>
 
-                <div id='banner-2  ' className=' w-72 h-4/5 shrink-0 '>
+                <div id='banner-2  ' className=' w-72 h-4/5 shrink-0'>
                     <img src={bannerimg} className=' w-full h-full object-cover' alt="" />
                 </div>
             </div>) : null}
@@ -76,7 +81,7 @@ function Herosection() {
                 </div>
 
                 <div className='flex flex-wrap gap-8 justify-center '>{
-                    products.map((a) => (
+                    productfirst.map((a) => (
                         <Card img={a.img} id={a.id} price={a.price} name={a.name} key={a.id} qty={a.quantity} description={a.description} />
                     ))}
                 </div>
@@ -107,48 +112,49 @@ function Herosection() {
                 </div>
             </div>
 
-            <div id='cartinfo' className={`w-full md:max-w-[450px] fixed top-0 bg-gray-100 h-full right-0  ${cartslide ? "translate-x-0" : "translate-x-full"} transition-all duration-500 overflow-auto z-20`} >
+            <div id='cartinfo' className={`w-full md:max-w-[450px] fixed top-0 bg-gray-100 h-full right-0 flex flex-col ${cartslide ? "translate-x-0" : "translate-x-full"} transition-all duration-500  z-20`} >
                 <div id='title' className='flex  font-bold text-2xl p-4 justify-between items-center'>Cart items<span onClick={() => (setcartslide(false))}><HugeiconsIcon icon={Cancel02Icon} /></span></div>
-                {items.map((e) => (
+                <div className='overflow-y-auto overscroll-contain h-full '>{items.map((e) => (
                     <Cartcard id={e.id} name={e.name} price={e.price} img={e.img} qty={e.qty} description={e.description} />
                 ))}
-                <div className='mx-7.5  mt-6 border border-gray-400'></div>
+                    <div className='mx-7.5  mt-6 border border-gray-400'></div>
 
 
-                <div id='amount-section' className='pt-6 px-7.5 font-medium'>
-                    {Subtotal ?
-                        <>
-                            <div className='flex justify-between mt-0.5'>
-                                Subtotal
-                                <div>Rs {Subtotal} </div>
-                            </div>
+                    <div id='amount-section' className='pt-6 px-7.5 font-medium'>
+                        {Subtotal ?
+                            <>
+                                <div className='flex justify-between mt-0.5'>
+                                    Subtotal
+                                    <div>Rs {Subtotal} </div>
+                                </div>
 
-                            <div className='flex justify-between mt-0.5'>
-                                Delivery fees
-                                <div>Rs{Deliveryfees} </div>
-                            </div>
+                                <div className='flex justify-between mt-0.5'>
+                                    Delivery fees
+                                    <div>Rs{Deliveryfees} </div>
+                                </div>
 
-                            <div className='flex justify-between mt-0.5'>
-                                Taxes
-                                <div>Rs{taxes}</div>
-                            </div>
+                                <div className='flex justify-between mt-0.5'>
+                                    Taxes
+                                    <div>Rs{taxes}</div>
+                                </div>
 
-                            <div className='  mt-6 border border-gray-400'></div>
+                                <div className='  mt-6 border border-gray-400'></div>
 
-                            <div className='flex justify-between mt-6 text-lg '>
-                                Total
-                                <div>Rs{Total} </div>
-                            </div>
+                                <div className='flex justify-between mt-6 text-lg '>
+                                    Total
+                                    <div>Rs{Total} </div>
+                                </div>
 
-                            <div className='group bg-green-300 flex items-center text-lg font-medium justify-center
-                            p-1.5 rounded-md hover:opacity-80 cursor-pointer mt-6 '>
-                                <div className='group-hover:scale-[1.03] transition-transform duration-300 will-change-transform transform-gpu' >Place order</div>
-                            </div>
-                        </>
-                        : <div className='text-center font-medium text-2xl'>
-                            Empty Cart
-                        </div>}
+                                <div className='group bg-green-300 flex items-center text-lg font-medium justify-center
+                            p-1.5 rounded-md hover:opacity-80 cursor-pointer my-6 '>
+                                    <div className='group-hover:scale-[1.03] transition-transform duration-300 will-change-transform transform-gpu' >Place order</div>
+                                </div>
+                            </>
+                            : <div className='text-center font-medium text-2xl'>
+                                Empty Cart
+                            </div>}
 
+                    </div>
                 </div>
             </div>
 

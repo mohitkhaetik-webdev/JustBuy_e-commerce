@@ -346,6 +346,7 @@ const productsecond = [
     price: 1499,
     description: "Lightweight floral dress perfect for summer outings.",
     img:img57,
+    quantity:1
   },
   {
     id: 58,
@@ -354,6 +355,7 @@ const productsecond = [
     price: 2199,
     description: "Classic blue denim jacket with modern fit.",
     img:img58,
+    quantity:1
   },
   {
     id: 59,
@@ -362,6 +364,7 @@ const productsecond = [
     price: 999,
     description: "Comfortable cotton kurti suitable for daily wear.",
     img: img59,
+    quantity:1
   },
   {
     id: 60,
@@ -370,6 +373,7 @@ const productsecond = [
     price: 1799,
     description: "Stylish black heels for parties and formal events.",
     img:img60,
+    quantity:1
   },{
     id: 61,
     name: "Matte Lipstick",
@@ -377,6 +381,7 @@ const productsecond = [
     price: 499,
     description: "Long lasting matte lipstick with smooth texture.",
     img: img61,
+    quantity:1
   },
   {
     id: 62,
@@ -385,6 +390,7 @@ const productsecond = [
     price: 899,
     description: "Full coverage liquid foundation for a flawless look.",
     img: img62,
+    quantity:1
   },
   {
     id: 63,
@@ -393,6 +399,7 @@ const productsecond = [
     price: 1299,
     description: "Multi-color eyeshadow palette for different styles.",
     img: img63,
+    quantity:1
   },
   {
     id: 64,
@@ -401,6 +408,7 @@ const productsecond = [
     price: 699,
     description: "Hydrating face moisturizer for soft and glowing skin.",
     img:img64,
+    quantity:1
   },
     {
     id: 65,
@@ -408,7 +416,8 @@ const productsecond = [
     type: "Kids",
     price: 499,
     description: "Soft cotton t-shirt with fun cartoon print for kids.",
-    img: img65
+    img: img65,
+    quantity:1
   },
   {
     id: 66,
@@ -416,7 +425,8 @@ const productsecond = [
     type: "Kids",
     price: 699,
     description: "Comfortable denim shorts perfect for daily play.",
-    img: img66
+    img: img66,
+    quantity:1
   },
   {
     id: 67,
@@ -424,7 +434,8 @@ const productsecond = [
     type: "Kids",
     price: 999,
     description: "Warm and cozy hoodie for winter days.",
-    img: img67
+    img: img67,
+    quantity:1
   },
   {
     id: 68,
@@ -432,7 +443,8 @@ const productsecond = [
     type: "Kids",
     price: 1199,
     description: "Lightweight sneakers designed for active kids.",
-    img: img68
+    img: img68,
+    quantity:1
   },
   {
     id: 69,
@@ -440,7 +452,8 @@ const productsecond = [
     type: "Kids",
     price: 1499,
     description: "Cute and stylish dress for kids parties and events.",
-    img: img69
+    img: img69,
+    quantity:1
   },
   {
     id: 70,
@@ -448,7 +461,8 @@ const productsecond = [
     type: "Mens",
     price: 1299,
     description: "Elegant formal shirt perfect for office and meetings.",
-    img: img70
+    img: img70,
+    quantity:1
   },
   {
     id: 71,
@@ -456,7 +470,8 @@ const productsecond = [
     type: "Mens",
     price: 599,
     description: "Comfortable cotton t-shirt for daily casual wear.",
-    img: img71
+    img: img71,
+    quantity:1
   },
 
   {
@@ -465,7 +480,8 @@ const productsecond = [
     type: "Mens",
     price: 2199,
     description: "Lightweight sports shoes designed for comfort and running.",
-    img:img72
+    img:img72,
+    quantity:1
   },
    {
     id: 73,
@@ -473,7 +489,8 @@ const productsecond = [
     type: "Mens",
     price: 599,
     description: "Comfortable cotton t-shirt for daily casual wear.",
-    img: "https://images.meesho.com/images/products/373639083/nnuwn_512.avif?width=360"
+    img: "https://images.meesho.com/images/products/373639083/nnuwn_512.avif?width=360",
+    quantity:1
   },
 
   {
@@ -482,7 +499,8 @@ const productsecond = [
     type: "Mens",
     price: 219,
     description: "Lightweight caps designed for comfort.",
-    img:"https://images.meesho.com/images/products/411622567/8tu6n_512.avif?width=360"
+    img:"https://images.meesho.com/images/products/411622567/8tu6n_512.avif?width=360",
+    quantity:1
   }
 
 
