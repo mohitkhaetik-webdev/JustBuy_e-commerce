@@ -14,10 +14,10 @@ function Productdetails() {
     return (
         show === null ? null : (
 
-            <div className=' min-h-screen  px-28 bg-gray-200' >
-                <div className='flex  gap-9 min-h-full pt-36'>
-                    <div id='img' className='h-96 w-80 border '>
-                        <img src={show?.img} className='h-full w-full object-cover' alt="" />
+            <div className=' min-h-screen px-6 sm:px-28 bg-gray-200' >
+                <div className='flex flex-col lg:flex-row  gap-9 min-h-full pt-36'>
+                    <div id='img' className='h-96 max-w-80 border shrink-0'>
+                        <img src={show?.img} className='h-full w-full object-cover ' alt="" />
                     </div>
                     <div id='details' className=' flex flex-col gap-4'>
                         <div id="text" className='text-2xl '>{show?.name}</div>
